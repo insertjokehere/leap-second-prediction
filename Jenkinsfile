@@ -1,5 +1,5 @@
 def digest
-def build_tag = uniqueTag()
+def build_tag = "latest"
 
 kanikoPod() {
     checkout scm
