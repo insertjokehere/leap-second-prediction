@@ -18,6 +18,7 @@ withPod(digest) {
     stage ('build') {
         container('main') {
             sh('''#!/bin/bash -e
+mkdir dist
 python bulletin-a.py
 ''')
         }
