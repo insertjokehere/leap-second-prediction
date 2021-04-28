@@ -40,9 +40,9 @@
 
         <div class="p-5 mb-4 bg-light rounded-3">
           <div class="container-fluid py-5">
-            <p class="col-md-8 fs-6">Based on <a href="{{ source.url }}">IERS Bulletin A Vol. {{ source.issue}} No. {{ source.number }}</a>, and making some very large, probably unjustified assumptions;</p>
+            <p class="col-md-8 fs-6">Based on <a href="{{ source.url }}">IERS Bulletin A Vol. {{ source.issue }} No. {{ source.number }}</a>, and making some very large, probably unjustified assumptions;</p>
             {% if next_leap_second %}
-            <p class="col-md-8 fs-4">at <a>the end of {% if next_leap_second.month == 7 %}June{% else %}December{% endif %}, {{ next_leap_second.year }}</b></p>
+            <p class="col-md-8 fs-4">at <a>the end of {% if next_leap_second.month == 7 %}June, {{ next_leap_second.year }}{% else %}December, {{ next_leap_second.year - 1 }}{% endif %}</b></p>
             {% if next_leap_second.is_positive %}
             <p class="col-md-8 fs-5">This will be a positive leap second</p>
             {% else %}
