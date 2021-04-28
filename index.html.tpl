@@ -19,6 +19,15 @@
       -->
     <link href="index.json" rel="alternate" type="application/json">
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBT3MY235W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KBT3MY235W');
+    </script>
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
