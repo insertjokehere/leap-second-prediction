@@ -45,9 +45,9 @@
             {% if next_leap_second %}
             <p class="col-md-8 fs-4">at <a>the end of {% if next_leap_second.month == 7 %}June, {{ next_leap_second.year }}{% else %}December, {{ next_leap_second.year - 1 }}{% endif %}</b></p>
             {% if next_leap_second.is_positive %}
-            <p class="col-md-8 fs-5">This will be a positive leap second</p>
+            <p class="col-md-8 fs-5">And will be a positive leap second</p>
             {% else %}
-            <p class="col-md-8 fs-5">This will be a negative leap second</p>
+            <p class="col-md-8 fs-5">And will be a negative leap second</p>
             {% endif %}
             {% else %}
             <p class="col-md-8 fs-4">no leap second is predicted for the next 50 years</p>
