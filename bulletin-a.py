@@ -48,6 +48,7 @@ while True and y < 2060:
     u = ut1_utc(dut1, rate, mjd1, mjd3)
     a = accuracy(mjd2, mjd3)
 
+    print(f"{y}-{m}-{d} - {u}")
     if (u > 0.5 or u < -0.5):
         has_result = True
         break

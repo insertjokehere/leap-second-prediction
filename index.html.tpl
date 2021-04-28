@@ -61,8 +61,8 @@
               <p class="fs-6">
                 Based on <a href="https://github.com/fanf2/bulletin-a">some great work</a> by <a href="https://twitter.com/fanf/">Tony Finch</a>, I'm parsing the text of the IERS Bulletin A notice to find the parameters provided to predict the difference between UT1 (solar time) and UTC (civil time). Once I have those values, I calculate the predicted difference going forward for the start of July and January each year until the absolute difference is more than 0.5 seconds. The Bulletin A parameters really aren't intended to be used to make predictions that far in the future, and are based on a model that assumes that the change in UT1-UTC is more or less linear, which <a href="https://datacenter.iers.org/singlePlot.php?plotname=BulletinA_All-UT1-UTC&id=6">hasn't been the case</a> recently.
               </p>
-              <p class="fs-8">tl;dr: Magic and guesswork. Take all of this with a giant pinch of salt</p>
-              <p class="fs-8">This page updates automatically once a week when the new bulletin is published</p>
+              <p class="fs-8">tl;dr: Magic and guesswork. Take all of this with a giant pinch of salt. Source code is available <a href="https://github.com/insertjokehere/leap-second-prediction/">on GitHub</a>.</p>
+              <p class="fs-8">This page updates automatically once a week when the new bulletin is published.</p>
             </div>
           </div>
           <div class="col-md-6">
@@ -75,7 +75,6 @@
         </div>
 
         <footer class="pt-3 mt-4 text-muted border-top">
-          &copy; 2021
         </footer>
       </div>
     </main>
