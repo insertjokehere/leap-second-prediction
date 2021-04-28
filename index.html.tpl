@@ -13,6 +13,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <meta name="theme-color" content="#7952b3">
 
+    <!--
+      -- Data is also available in JSON format
+      -- Schema is likely to change in the future!
+      -->
+    <link href="index.json" rel="alternate" type="application/json">
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
