@@ -1,0 +1,33 @@
+[tool.black]
+line-length = 120
+target-version = ['py38']
+
+[tool.poetry]
+name = "bulletin-a"
+version = "0.1.0"
+description = ""
+authors = []
+
+[tool.poetry.dependencies]
+python = ">=3.6,<4"
+Jinja2 = "2.11.3"
+roman = "3.3"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+isort = "^5.0.0"
+pytest = "^6.0.0"
+pytest-black = "^0.3.9"
+pytest-isort = "^1.0.0"
+pytest-flake8 = "^1.0.6"
+pytest-mypy = "^0.8.0"
+mypy = ""
+
+[tool.isort]
+multi_line_output=3
+include_trailing_comma=true
+
+[tool.poetry.scripts]
+bulletin-a = "bulletin_a.site:main"
+bulletin-a-update = "bulletin_a.update:main"

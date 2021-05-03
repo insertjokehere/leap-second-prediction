@@ -19,7 +19,7 @@ withPod(digest) {
         container('main') {
             sh('''#!/bin/bash -e
 mkdir dist
-python bulletin-a.py
+bulletin-a --output-directory dist/
 ''')
         }
         zip archive: false, dir: 'dist/', glob: '', zipFile: 'site.zip'

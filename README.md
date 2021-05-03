@@ -1,20 +1,18 @@
 ## Leap Second Precitions
 
-This is the source for the leap second predictor that will eventually be hosted on https://www.565851109.xyz (once AWS lets me issue more SSL certs...)
+This is the source for the leap second predictor that is hosted on https://www.565851109.xyz - it also includes some code for manipulating Bulletins that may be useful
 
 ### Building the site
 
-Jenkins takes care of doing this automatically and uploading to S3, but manually:
+Jenkins takes care of doing this automatically and uploading to S3, but manually, using Poetry:
 
 ``` sh
-virtualenv venv
-. ./venv/bin/activate
-pip install -r requirements.txt
+poetry install
 mkdir dist
-python bulletin-a.py
+poetry run bulletin-a
 ```
 
-This repo needs to be updated weekly when the new IERS Bulletin is published, currently I'm downloading it manually from https://www.iers.org/IERS/EN/Publications/Bulletins/bulletins.html, eventually I'll automate it...
+This repo needs to be updated weekly when the new IERS Bulletin is published. This repo includes a script to automatically fetch the files and update this repo using the Gitea API, but it is pretty specific to my setup and probably isn't much use for others.
 
 ### Calculating the prediction
 

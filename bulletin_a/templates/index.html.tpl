@@ -56,10 +56,12 @@
 
         <div class="p-5 mb-4 bg-light rounded-3">
           <div class="container-fluid py-5">
-            <p class="col-md-8 fs-6">Based on <a href="{{ source.url }}">IERS Bulletin A Vol. {{ source.issue }} No. {{ source.number }}</a>, and making some very large, probably unjustified assumptions;</p>
-            {% if next_leap_second %}
-            <p class="col-md-8 fs-4">at <a>the end of {% if next_leap_second.month == 7 %}June, {{ next_leap_second.year }}{% else %}December, {{ next_leap_second.year - 1 }}{% endif %}</b></p>
-            {% if next_leap_second.is_positive %}
+            <p class="col-md-8 fs-6">Based on <a href="{{ latest.source.url }}">IERS Bulletin A Vol. {{ latest.source.issue }} No. {{ latest.source.number }}</a>, and making some very large, probably unjustified assumptions;</p>
+            {% if latest.next_leap_second %}
+            {% with next=latest.next_leap_second.predicted_leap_day %}
+            <p class="col-md-8 fs-4">at <a>the end of {% if next.month == 7 %}June, {{ next.year }}{% else %}December, {{ next.year - 1 }}{% endif %}</b></p>
+            {% endwith %}
+            {% if latest.next_leap_second.is_positive %}
             <p class="col-md-8 fs-5">And will be a positive leap second</p>
             {% else %}
             <p class="col-md-8 fs-5">And will be a negative leap second</p>
