@@ -1,5 +1,46 @@
 def digest
 def build_tag = "latest"
+def poetry = new me.hhome.ImgReference(
+    'harbor.hhome.me', "library/poetry39", 'latest', ''
+)
+podTemplate(showRawYaml: false, yaml: """
+kind: Pod
+spec:
+  containers:
+  - name: main
+    image: ${poetry.digest_reference()}
+    command:
+    - /bin/cat
+    tty: true
+    volumeMounts:
+      - name: cache
+        mountPath: /cache
+  volumes:
+  - name: cache
+    persistentVolumeClaim:
+      claimName: poetry-cache
+"""
+) {
+    node(POD_LABEL) {
+        checkout scm
+        stage('test') {
+            container('main') {
+                ansiColor('xterm') {
+                    try {
+                        sh '''
+export HOME=$(pwd)
+poetry config cache-dir /cache
+poetry install --remove-untracked
+poetry run pytest --cache-clear --junit-xml test-results.xml
+'''
+                    } finally {
+                        junit 'test-results.xml'
+                    }
+                }
+            }
+        }
+    }
+}
 
 kanikoPod() {
     checkout scm
