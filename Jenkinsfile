@@ -17,8 +17,7 @@ withPod(digest) {
     checkout scm
     stage ('build') {
         container('main') {
-            sh('''#!/bin/bash -e
-mkdir dist
+            sh('''mkdir dist
 bulletin-a --output-directory dist/
 ''')
         }
