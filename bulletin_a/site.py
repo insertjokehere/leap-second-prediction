@@ -8,7 +8,7 @@ from typing import Optional
 
 from jinja2 import Template
 
-from . import BulletinA, templates, bulletins
+from . import BulletinA, bulletins, templates
 
 
 def encoder(o):
