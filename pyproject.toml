@@ -10,7 +10,7 @@ authors = []
 
 [tool.poetry.dependencies]
 python = ">=3.6,<4"
-Jinja2 = "2.11.3"
+Jinja2 = "3.0.1"
 roman = "3.3"
 requests = "^2.25.1"
 
