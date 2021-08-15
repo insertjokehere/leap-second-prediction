@@ -84,22 +84,7 @@ node() {
     stage('publish-github') {
         when(BRANCH_NAME == 'master') {
             checkout scm
-            withCredentials([
-                sshUserPrivateKey(
-                    credentialsId: 'jenkins-565851109-xyz-github',
-                    keyFileVariable: 'SSH_KEYFILE',
-                    passphraseVariable: '',
-                    usernameVariable: ''
-                )
-            ]) {
-                sh '''
-mkdir ~/.ssh
-chmod 0700 ~/.ssh
-ssh-keyscan github.com > ~/.ssh/known_hosts
-echo "IdentityFile ${SSH_KEYFILE}" > ~/.ssh/config
-git remote add github git@github.com:insertjokehere/leap-second-prediction.git
-git push -f github $(git rev-parse HEAD):master'''
-            }
+            gitReplicate('jenkins-565851109-xyz-github', 'git@github.com:insertjokehere/leap-second-prediction.git', 'master', 'github.com')
         }
     }
 }
