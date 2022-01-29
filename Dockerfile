@@ -15,7 +15,7 @@ RUN poetry build --format sdist \
     && pip wheel -r /tmp/requirements.txt -w dist/
 
 
-FROM python:3.9-alpine@sha256:0c9fb49cb23045e7148d8c92eedaf9ce3d0f9fae18812f6b25d2831b64a1e531
+FROM python:3.9-alpine@sha256:a90109e6a257b503924fbc69c782850d4ad98e9b778697d046352ef149368234
 
 COPY --from=builder /src/dist/* /src/
 COPY --from=builder /src/poetry.lock /src/
