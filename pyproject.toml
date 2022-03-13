@@ -9,15 +9,15 @@ description = ""
 authors = []
 
 [tool.poetry.dependencies]
-python = ">=3.6,<4"
-Jinja2 = "3.0.1"
+python = ">=3.8,<4"
+Jinja2 = "3.0.3"
 roman = "3.3"
 requests = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"
 isort = "^5.0.0"
-pytest = "^6.0.0"
+pytest = "^7.0.0"
 pytest-black = "^0.3.9"
 pytest-isort = "^2.0.0"
 pytest-flake8 = "^1.0.6"

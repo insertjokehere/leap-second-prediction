@@ -1,7 +1,7 @@
 def digest
 def build_tag = "latest"
 def poetry = new me.hhome.ImgReference(
-    'harbor.hhome.me', "library/poetry39", 'latest', ''
+    'harbor.hhome.me', "library/poetry310", 'latest', ''
 )
 podTemplate(showRawYaml: false, yaml: """
 kind: Pod
