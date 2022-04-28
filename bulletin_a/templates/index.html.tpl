@@ -86,8 +86,16 @@
           <div class="col-md-6">
             <div class="h-100 p-5 bg-light border rounded-3">
               <h2>What does that mean?</h2>
-              <p>All the clocks you encounter in your day-to-day life set their time according to a system called UTC which assumes that the length of a year doesn't change over time. Unfortunately, reality isn't that tidy, and the rotation of the earth has actually been slowing down for (at least) the last few decades. In order to keep the "civil" time that most people use from getting too far out of sync with "solar" time, the people in charge of UTC add an extra second to the last minute of June or December if they determine that things are getting too far out of sync.</p>
-              <p>Interestingly, Earth's rotation stopped slowing down towards the end of 2019, and in 2020 the trend reversed and the planet's rotation started speeding up again. It's not entirely clear what caused this, but an interesting side effect might be the need to <i>remove</i> a second from UTC. This is called a "negative" leap second, and has never been done before.</p>
+              <p>Typical clocks are designed to run at a steady pace, counting out the same number of seconds every day.
+		But reality isn't that tidy, and the rotation of the earth has actually been slowing down for
+		most of history due to tidal friction. In order to keep the "civil" time that most people use
+		from getting too far out of sync with "solar" time, the people in charge of UTC add an extra second
+		to the last minute of June or December if they determine that things are getting too far out of sync.</p>
+              <p>Interestingly, Earth's rotation has recently been speeding up a bit, and towards the end of 2019 started
+                turning faster than the metric day for the
+		<a href="https://www.ucolick.org/~sla/leapsecs/dutc.html">first time since the 1940's</a>.
+                It's not entirely clear what caused this, but an interesting side effect might be the need to <i>remove</i>
+		a second from UTC. This is called a "negative" leap second, and has never been done before.</p>
             </div>
           </div>
         </div>
