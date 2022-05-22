@@ -89,10 +89,10 @@
               <p>Typical clocks are designed to run at a steady pace, counting out the same number of seconds every day.
 		But reality isn't that tidy, and the rotation of the earth has actually been slowing down for
 		most of history due to tidal friction. In order to keep the "civil" time that most people use
-		from getting too far out of sync with "solar" time, the people in charge of UTC add an extra second
+		from getting too far out of sync with solar time&nbsp;<span class="d-inline-block" data-toggle="tooltip" title="where one day is however long the Earth takes to rotate on its axis, which vaires over time"><sup>[1]</sup></span>, the people in charge of UTC add an extra second
 		to the last minute of June or December if they determine that things are getting too far out of sync.</p>
               <p>Interestingly, Earth's rotation has recently been speeding up a bit, and towards the end of 2019 started
-                turning faster than the metric day for the
+                turning faster than the metric&nbsp;<span class="d-inline-block" data-toggle="tooltip" title="exactly 24x60x60 seconds long"><sup>[2]</sup></span> day for the
 		<a href="https://www.ucolick.org/~sla/leapsecs/dutc.html">first time since the 1940's</a>.
                 It's not entirely clear what caused this, but an interesting side effect might be the need to <i>remove</i>
 		a second from UTC. This is called a "negative" leap second, and has never been done before.</p>
