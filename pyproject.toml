@@ -1,12 +1,16 @@
 [tool.black]
 line-length = 120
-target-version = ['py38']
+target-version = ["py38"]
 
 [tool.poetry]
 name = "bulletin-a"
 version = "0.1.0"
 description = ""
 authors = []
+
+[[tool.poetry.source]]
+name = "hhome"
+url = "https://pypi.hhome.me/simple/"
 
 [tool.poetry.dependencies]
 python = ">=3.8,<4"
@@ -15,20 +19,16 @@ roman = "3.3"
 requests = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
-black = "^19.10b0"
-isort = "^5.0.0"
-pytest = "^7.0.0"
-pytest-black = "^0.3.9"
-pytest-isort = "^3.0.0"
-pytest-flake8 = "^1.0.6"
-pytest-mypy = "^0.9.0"
-mypy = ""
+pytest-hhome = "2.0.20"
 types-requests = "^2.27.11"
 
 [tool.isort]
-multi_line_output=3
-include_trailing_comma=true
+profile = "black"
 
 [tool.poetry.scripts]
 bulletin-a = "bulletin_a.site:main"
 bulletin-a-update = "bulletin_a.update:main"
+
+[tool.pytest.ini_options]
+addopts = "--flake8 --isort --black --mypy"
+python_files = "tests.py test_*.py *_tests.py"

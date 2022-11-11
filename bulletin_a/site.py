@@ -24,7 +24,11 @@ def encoder(o):
 
 def serialize(bulletin: BulletinA, result: Optional[BulletinA.LeapSecondPrediction]):
     output = {
-        "source": {"year": bulletin.year, "number": bulletin.number, "url": bulletin.cannonical_url,},
+        "source": {
+            "year": bulletin.year,
+            "number": bulletin.number,
+            "url": bulletin.cannonical_url,
+        },
         "next_leap_second": None,
     }
 
