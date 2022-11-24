@@ -19,7 +19,7 @@ roman = "3.3"
 requests = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
-pytest-hhome = "2.0.20"
+pytest-hhome = "2.0.21"
 types-requests = "^2.27.11"
 
 [tool.isort]

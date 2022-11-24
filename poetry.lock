@@ -446,7 +446,7 @@ reference = "hhome"
 
 [[package]]
 name = "pytest-hhome"
-version = "2.0.20"
+version = "2.0.21"
 description = ""
 category = "dev"
 optional = false
@@ -462,7 +462,7 @@ pytest-black-ng = ">=0.4.1,<0.5.0"
 pytest-flake8 = ">=1.1.1,<2.0.0"
 pytest-isort = ">=3.0.0,<4.0.0"
 pytest-mypy = ">=0.10.0,<0.11.0"
-tomlkit = "0.11.5"
+tomlkit = "0.11.6"
 types-requests = ">=2.27.11,<3.0.0"
 
 [package.source]
@@ -577,11 +577,11 @@ reference = "hhome"
 
 [[package]]
 name = "tomlkit"
-version = "0.11.5"
+version = "0.11.6"
 description = "Style preserving TOML library"
 category = "dev"
 optional = false
-python-versions = ">=3.6,<4.0"
+python-versions = ">=3.6"
 
 [package.source]
 type = "legacy"
@@ -651,7 +651,7 @@ reference = "hhome"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<4"
-content-hash = "b5f9fedf959877e989d99bf211f632deb0d0cc4148f7c651f777c7935179c0b2"
+content-hash = "1511f40d6fed8951d43900f35eb4d7aa6d1176ebcf896bd36db2ea16085a2059"
 
 [metadata.files]
 attrs = [
@@ -842,8 +842,8 @@ pytest-flake8 = [
     {file = "pytest_flake8-1.1.1-py2.py3-none-any.whl", hash = "sha256:e0661a786f8cbf976c185f706fdaf5d6df0b1667c3bcff8e823ba263618627e7"},
 ]
 pytest-hhome = [
-    {file = "pytest_hhome-2.0.20-py3-none-any.whl", hash = "sha256:64074c11786222ffef222c45edb002d0b63e8aa9f3177288606c5836fe79b495"},
-    {file = "pytest_hhome-2.0.20.tar.gz", hash = "sha256:a790ccc07687bef35171ab9b4015a8b8f4cde638d547bc527d9ef33d66ce9286"},
+    {file = "pytest_hhome-2.0.21-py3-none-any.whl", hash = "sha256:5bca7415bb4c4f3325477b7b8aed7163ac5ae79c562816f2166d1882dd05e745"},
+    {file = "pytest_hhome-2.0.21.tar.gz", hash = "sha256:e7964151ce484331ac250a886e90565e7ed8a019580da5e1d7555bab739cfcce"},
 ]
 pytest-isort = [
     {file = "pytest_isort-3.1.0-py3-none-any.whl", hash = "sha256:13e68d84b35d4f79d20d3d165f491bffc9e4b9509f420381a4186118c4454bd3"},
@@ -870,8 +870,8 @@ tomli = [
     {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
 ]
 tomlkit = [
-    {file = "tomlkit-0.11.5-py3-none-any.whl", hash = "sha256:f2ef9da9cef846ee027947dc99a45d6b68a63b0ebc21944649505bf2e8bc5fe7"},
-    {file = "tomlkit-0.11.5.tar.gz", hash = "sha256:571854ebbb5eac89abcb4a2e47d7ea27b89bf29e09c35395da6f03dd4ae23d1c"},
+    {file = "tomlkit-0.11.6-py3-none-any.whl", hash = "sha256:07de26b0d8cfc18f871aec595fda24d95b08fef89d147caa861939f37230bf4b"},
+    {file = "tomlkit-0.11.6.tar.gz", hash = "sha256:71b952e5721688937fb02cf9d354dbcf0785066149d2855e44531ebdd2b65d73"},
 ]
 types-requests = [
     {file = "types-requests-2.28.11.4.tar.gz", hash = "sha256:d4f342b0df432262e9e326d17638eeae96a5881e78e7a6aae46d33870d73952e"},
