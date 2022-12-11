@@ -1,4 +1,4 @@
-FROM harbor.hhome.me/library/poetry310:latest AS builder
+FROM harbor.hhome.me/library/poetry311:latest AS builder
 
 WORKDIR /src
 
