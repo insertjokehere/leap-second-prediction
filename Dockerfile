@@ -6,7 +6,7 @@ COPY . .
 
 RUN poetry-wheel-dist
 
-FROM python:3.11-alpine@sha256:3e5d84cd9d34242e1b501be1abfed24208c93bab20f28b081aaeac1c56953c82
+FROM python:3.11-alpine@sha256:b99b26dc03e8f6be00069dddd63903c38b65784e92e217d12f2ac1471ce0db40
 
 COPY --from=builder /src/dist/* /src/
 COPY --from=builder /src/poetry.lock /src/
