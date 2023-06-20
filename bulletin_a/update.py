@@ -26,6 +26,8 @@ def main():
         current = BulletinA.parse(f)
 
     expected_number = int(now.strftime("%W"))
+    if now.weekday() < 4:  # Thursday
+        expected_number -= 1
     expected_volume = roman.toRoman(now.year - 1987)
 
     print(f"Current Bulletin: {current.year} No. {current.number}")
