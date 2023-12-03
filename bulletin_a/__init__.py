@@ -15,7 +15,6 @@ ISSUE_RX = re.compile(r"Vol. ([XIV]+) No. ([0-9]+)")
 class BulletinA:
     @dataclass
     class LeapSecondPrediction:
-
         # The day the predicted leap second will happen
         # Should be either the 1st of January (as in, the leap second is added to the end of December the previous year)
         # or 1st July (leap second added to the end of the last day of June)
@@ -76,13 +75,14 @@ class BulletinA:
         else:
             raise BulletinA.ParseError("Cannot determine bulletin number")
 
-        return cls(dut1, rate, mjd1, mjd2, roman.fromRoman(volume) + 1987, int(number))
+        return cls(dut1, rate, mjd1, mjd2, volume, roman.fromRoman(volume) + 1987, int(number))
 
-    def __init__(self, dut1: Decimal, rate: Decimal, mjd1: Decimal, mjd2: Decimal, year: int, number: int):
+    def __init__(self, dut1: Decimal, rate: Decimal, mjd1: Decimal, mjd2: Decimal, volume: str, year: int, number: int):
         self.dut1 = dut1
         self.rate = rate
         self.mjd1 = mjd1
         self.mjd2 = mjd2
+        self.volume = volume
         self.year = year
         self.number = number
 

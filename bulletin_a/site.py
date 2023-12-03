@@ -28,6 +28,7 @@ def serialize(bulletin: BulletinA, result: Optional[BulletinA.LeapSecondPredicti
             "year": bulletin.year,
             "number": bulletin.number,
             "url": bulletin.cannonical_url,
+            "volume": bulletin.volume,
         },
         "next_leap_second": None,
     }
